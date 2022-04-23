@@ -71,6 +71,7 @@ bank_teleport() {
 		MoveMouse(1432, 935)
 		Sleep rand_bank_teleport
 		MouseClick, left, 1432, 935
+		Send, {2}
 	}
 	return
 }
