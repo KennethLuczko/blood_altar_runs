@@ -5,6 +5,7 @@ SendMode Input
 CoordMode, Pixel, Window
 
 Z::
+Loop
 {
 	blood_altar()
 	colossal_pouch()
@@ -12,6 +13,11 @@ Z::
 	colossal_pouch()
 	blood_altar_close()
 	bank_teleport()
+	restart_pixel_search()
+}
+
+restart_pixel_search() {
+	Sleep, 1000
 }
 
 blood_altar() {
@@ -28,7 +34,6 @@ blood_altar() {
 		MouseClick, left, %blood_altar_X%, %blood_altar_Y%
 		Sleep rand_blood_altar
 	}
-	return
 }
 
 blood_altar_close() {
@@ -45,7 +50,6 @@ blood_altar_close() {
 		MouseClick, left, %blood_altar_X%, %blood_altar_Y%
 		Sleep rand_blood_altar
 	}
-	return
 }
 
 colossal_pouch() {
@@ -60,7 +64,6 @@ colossal_pouch() {
 		Sleep rand_colossal_pouch
 		Send, {Shift up}
 	}
-	return
 }
 
 bank_teleport() {
@@ -73,5 +76,4 @@ bank_teleport() {
 		MouseClick, left, 1432, 935
 		Send, {2}
 	}
-	return
 }
